@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/**
+Move Player Horizontal or Vertically across the map and play the appropriate
+animation
+*/
 public class PlayerMovement : MonoBehaviour
 {
 

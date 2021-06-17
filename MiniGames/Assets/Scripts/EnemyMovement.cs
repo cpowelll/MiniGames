@@ -10,6 +10,9 @@ public class EnemyMovement : MonoBehaviour
     public float spawnXLimit = 0f;
     public float speed = 5f;
     Rigidbody2D rigidBody;
+    public Animator animator;
+    Vector2 movement;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +24,12 @@ public class EnemyMovement : MonoBehaviour
 
     void Move(float theSpeed){
       rigidBody.velocity = new Vector2(theSpeed, 0f);
+      animator.SetFloat("speed", 1);
 
     }
     void StopMovement(){
       Move(0);
+      animator.SetFloat("speed", 0);
     }
 
     void Spawn(){
